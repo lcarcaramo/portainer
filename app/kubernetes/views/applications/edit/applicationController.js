@@ -106,7 +106,8 @@ class KubernetesApplicationController {
     KubernetesStackService,
     KubernetesPodService,
     KubernetesNodeService,
-    KubernetesNamespaceHelper
+    KubernetesNamespaceHelper,
+    EndpointProvider
   ) {
     this.$async = $async;
     this.$state = $state;
@@ -122,6 +123,8 @@ class KubernetesApplicationController {
     this.KubernetesNodeService = KubernetesNodeService;
 
     this.KubernetesNamespaceHelper = KubernetesNamespaceHelper;
+
+    this.EndpointProvider = EndpointProvider;
 
     this.ApplicationDataAccessPolicies = KubernetesApplicationDataAccessPolicies;
     this.KubernetesServiceTypes = KubernetesServiceTypes;
@@ -331,6 +334,7 @@ class KubernetesApplicationController {
       eventWarningCount: 0,
       expandedNote: false,
       useIngress: false,
+      useServerMetrics: this.EndpointProvider.currentEndpoint().Kubernetes.Configuration.UseServerMetrics,
     };
 
     this.state.activeTab = this.LocalStorage.getActiveTab('application');
