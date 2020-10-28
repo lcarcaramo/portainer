@@ -13,7 +13,6 @@ class KubernetesPodService {
 
     this.getAllAsync = this.getAllAsync.bind(this);
     this.logsAsync = this.logsAsync.bind(this);
-    this.statsAsync = this.statsAsync.bind(this);
     this.deleteAsync = this.deleteAsync.bind(this);
   }
   /**
@@ -55,27 +54,6 @@ class KubernetesPodService {
 
   logs(namespace, podName, containerName) {
     return this.$async(this.logsAsync, namespace, podName, containerName);
-  }
-
-  /**
-   * Stats
-   *
-   * @param {string} namespace
-   * @param {string} podName
-   */
-  async statsAsync(namespace, podName) {
-    try {
-      const params = new KubernetesCommonParams();
-      params.id = podName;
-      const data = await this.KubernetesPods(namespace).stats(params).$promise;
-      return data;
-    } catch (err) {
-      throw new PortainerError('Unable to retrieve pod stats', err);
-    }
-  }
-
-  stats(namespace, podName) {
-    return this.$async(this.statsAsync, namespace, podName);
   }
 
   /**
