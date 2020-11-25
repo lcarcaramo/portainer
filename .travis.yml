@@ -13,7 +13,11 @@ before_script:
   # - docker login quay.io -u $ROBOT -p $ROBOT_TOKEN
 script: 
   # - docker build $PWD/base/ --tag portainer/base
-  - docker build $BUILD_DIR -f $BUILD_DIR/alpine.Dockerfile --tag $TAG
+  #- docker build $BUILD_DIR -f $BUILD_DIR/alpine.Dockerfile --tag $TAG
   #- cd $TEST_DIR && bash $TEST_SCRIPT 
+  mkdir -p ${GOPATH}/src/github.com/portainer
+  ln -s ${PWD} ${GOPATH}/src/github.com/portainer/portainer
+  yarn
+  yarn start
 after_script:
  # - docker push $REPO
