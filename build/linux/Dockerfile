@@ -1,4 +1,5 @@
 FROM portainer/base
+RUN ls
 COPY dist /
 VOLUME /data
 WORKDIR /
