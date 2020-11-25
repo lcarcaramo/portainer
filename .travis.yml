@@ -12,8 +12,8 @@ before_script:
   #- cd $TEST_DIR && chmod +x $TEST_SCRIPT
   # - docker login quay.io -u $ROBOT -p $ROBOT_TOKEN
 script: 
-  - docker build $PWD/base/ --tag portainer/base
-  - docker build $BUILD_DIR --tag $TAG
+  # - docker build $PWD/base/ --tag portainer/base
+  - docker build $BUILD_DIR -f alpine.Dockerfile --tag $TAG
   #- cd $TEST_DIR && bash $TEST_SCRIPT 
 after_script:
  # - docker push $REPO
