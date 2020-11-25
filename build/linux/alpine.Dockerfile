@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM quay.io/ibmz/alpine:3.12
 COPY dist /
 VOLUME /data
 WORKDIR /
