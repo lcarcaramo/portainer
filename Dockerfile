@@ -1,7 +1,5 @@
 FROM quay.io/ibmz/ubuntu:18.04
 
-RUN echo "Travis build directory:" && echo $TRAVIS_BUILD_DIR
-
 RUN apt-get update && \
         apt-get remove -y cmdtest && \
         apt-get install -y nodejs && \
