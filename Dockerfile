@@ -1,6 +1,7 @@
 FROM quay.io/ibmz/ubuntu:18.04
 
-WORKDIR /home/travis/build/YBA-IBM/portainer
+#WORKDIR /home/travis/build/YBA-IBM/portainer
+COPY . /
 
 RUN apt-get update && \
         apt-get remove -y cmdtest && \
