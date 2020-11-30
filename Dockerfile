@@ -6,7 +6,7 @@ COPY . /
 RUN apt-get update && \
         apt-get remove -y cmdtest && \
         #apt-get install -y nodejs && \
-        apt-get install curl && \
+        apt-get install -y curl && \
         curl -sL https://deb.nodesource.com/setup_10.x -o nodesource_setup.sh && \
         bash nodesource_setup.sh && \
         apt-get install -y nodejs && \
