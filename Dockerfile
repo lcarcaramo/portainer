@@ -10,7 +10,7 @@ RUN apt-get update && \
         #apt-get install -y golang-stable && \
         #
         mkdir temp                                                      && \
-        cd /temp                                                        && \
+        cd temp                                                        && \
         wget https://dl.google.com/go/go1.15.5.linux-amd64.tar.gz       && \
         tar -xvf go1.15.5.linux-amd64.tar.gz                            && \
         mv go /usr/local                                                && \
