@@ -1,7 +1,7 @@
 FROM quay.io/ibmz/ubuntu:18.04
 
 RUN apt-get update && 
-        apt remove -y cmdtest && \
+        apt-get remove -y cmdtest && \
         apt-get install -y nodejs && \
         apt-get install -y yarn && \
         apt-get install -y wget && \
