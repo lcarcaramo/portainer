@@ -12,7 +12,7 @@ before_script:
   #- cd $TEST_DIR && chmod +x $TEST_SCRIPT
   # - docker login quay.io -u $ROBOT -p $ROBOT_TOKEN
 script: 
-  - echo "PWD from .travis": && pwd && ls
+  - echo "PWD from travis:" && pwd && ls
   - docker build $PWD --tag portainer/base
   #- docker build $BUILD_DIR -f $BUILD_DIR/alpine.Dockerfile --tag $TAG
   #- cd $TEST_DIR && bash $TEST_SCRIPT 
