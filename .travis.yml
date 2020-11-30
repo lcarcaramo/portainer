@@ -17,7 +17,7 @@ script:
   #- cd $TEST_DIR && bash $TEST_SCRIPT 
   #mkdir -p ${GOPATH}/src/github.com/portainer
   #ln -s ${PWD} ${GOPATH}/src/github.com/portainer/portainer
-  yarn
-  yarn start
+  #yarn
+  #yarn start
 after_script:
  # - docker push $REPO
