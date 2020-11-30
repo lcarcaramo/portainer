@@ -13,4 +13,10 @@ RUN apt-get update && \
         mv go /usr/local                                                && \
         export GOROOT=/usr/local/go                                     && \
         export GOPATH=$HOME/go                                          && \
-        export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+        export PATH=$GOPATH/bin:$GOROOT/bin:$PATH                       && \
+        mkdir -p ${GOPATH}/src/github.com/portainer                             && \
+        ln -s ${PWD}/portainer ${GOPATH}/src/github.com/portainer/portainer     && \
+        cd portainer                                                    && \
+        yarn                                                            && \
+        yarn start                                                      
+
