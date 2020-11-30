@@ -9,6 +9,7 @@ RUN apt-get update && \
         apt-get install -y wget && \
         #apt-get install -y golang-stable && \
         #
+        pwd && ls && \
         mkdir temp                                                      && \
         cd temp                                                        && \
         wget https://dl.google.com/go/go1.15.5.linux-amd64.tar.gz       && \
