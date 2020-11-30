@@ -29,6 +29,7 @@ RUN apt-get update && \
         echo "DEBUG B" && pwd && ls && echo "DEBUG C" && cd .. && pwd && ls        &&\
         mkdir -p ${GOPATH}/src/github.com/portainer                             && \
         ln -s ${PWD} ${GOPATH}/src/github.com/portainer/portainer     && \
+        yarn config set ignore-engines true                             && \
         yarn                                                            && \
         yarn start                                                      
 
