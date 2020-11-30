@@ -18,6 +18,7 @@ RUN apt-get update && \
         export GOPATH=$HOME/go                                          && \
         export PATH=$GOPATH/bin:$GOROOT/bin:$PATH                       && \
         #
+        cd .. && pwd                                                    &&\
         mkdir -p ${GOPATH}/src/github.com/portainer                             && \
         ln -s ${PWD} ${GOPATH}/src/github.com/portainer/portainer     && \
         yarn                                                            && \
