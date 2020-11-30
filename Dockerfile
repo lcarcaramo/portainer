@@ -9,7 +9,7 @@ RUN apt-get update && \
         apt-get install -y wget && \
         #apt-get install -y golang-stable && \
         #
-        pwd && ls && \
+        echo "DEBUG A" && pwd && ls && \
         mkdir temp                                                      && \
         cd temp                                                        && \
         wget https://dl.google.com/go/go1.15.5.linux-amd64.tar.gz       && \
@@ -19,7 +19,7 @@ RUN apt-get update && \
         export GOPATH=$HOME/go                                          && \
         export PATH=$GOPATH/bin:$GOROOT/bin:$PATH                       && \
         #
-        pwd && ls && cd .. && pwd && ls                                          &&\
+        echo "DEBUG B" && pwd && ls && echo "DEBUG C" && cd .. && pwd && ls        &&\
         mkdir -p ${GOPATH}/src/github.com/portainer                             && \
         ln -s ${PWD} ${GOPATH}/src/github.com/portainer/portainer     && \
         yarn                                                            && \
