@@ -3,7 +3,9 @@ FROM quay.io/ibmz/ubuntu:18.04
 RUN apt-get update && \
         apt-get remove -y cmdtest && \
         apt-get install -y nodejs && \
-        apt-get install -y yarn && \
+        apt-get install -y npm && \
+        npm install yarn –g && \
+        #apt-get install -y yarn && \
         apt-get install -y wget && \
         #apt-get install -y golang-stable && \
         #
