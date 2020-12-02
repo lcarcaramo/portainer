@@ -57,8 +57,8 @@ RUN apt-get update && \
         echo "DEBUG A" && pwd && ls && \
         mkdir temp                                                      && \
         cd temp                                                        && \
-        wget https://dl.google.com/go/go1.15.5.linux-amd64.tar.gz       && \
-        tar -xvf go1.15.5.linux-amd64.tar.gz                            && \
+        wget https://dl.google.com/go/go1.15.5.linux-s390x.tar.gz       && \
+        tar -xvf go1.15.5.linux-s390x.tar.gz                            && \
         mv go /usr/local                                                && \
         export GOROOT=/usr/local/go                                     && \
         export GOPATH=$HOME/go                                          && \
