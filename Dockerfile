@@ -8,6 +8,7 @@ ARG NODEJS_HOME=/opt/nodejs
 ENV HOME=/tmp \
     NODEJS_HOME=${NODEJS_HOME} \
     NODEJS_VERSION=v10.23.0 \
+    NODE_VERSION=10.23.0 \
     PATH=${NODEJS_HOME}/bin:${PATH} \
     NODE_PATH=${NODEJS_HOME}/lib/node_modules \
     SRC_PATH=/usr/src
