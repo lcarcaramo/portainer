@@ -24,6 +24,7 @@ RUN apt-get update && \
         apt-get install -y wget && \
         apt-get install -y gpg && \
         apt-get install xz-utils && \
+        apt-get install autoconf libpng-dev && \
         #
         #
         #wget -U "nodejs" -q -O node-${NODEJS_VERSION}-linux-s390x.tar.xz https://nodejs.org/dist/${NODEJS_VERSION}/node-${NODEJS_VERSION}-linux-s390x.tar.xz && \
