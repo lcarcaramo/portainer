@@ -16,6 +16,7 @@ RUN apt-get update && \
         apt-get remove -y cmdtest && \
         #apt-get install -y nodejs && \
         apt-get install -y curl && \
+        apt-get install -y wget && \
         #
         #curl -sL https://deb.nodesource.com/setup_10.x -o nodesource_setup.sh && \
         #curl -sL https://deb.nodesource.com/setup_10.x | bash - && \
@@ -45,7 +46,6 @@ RUN apt-get update && \
         apt-get install -y npm && \
         npm install yarn -g && \
         #apt-get install -y yarn && \
-        apt-get install -y wget && \
         #apt-get install -y golang-stable && \
         #
         echo "DEBUG A" && pwd && ls && \
