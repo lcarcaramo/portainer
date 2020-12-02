@@ -53,7 +53,7 @@ RUN apt-get update && \
         tar Jxf node-${NODEJS_VERSION}-linux-s390x.tar.xz --no-same-owner && \
         rm node-${NODEJS_VERSION}-linux-s390x.tar.xz SHASUMS256.txt SHASUMS256.txt.sig /tmp/.gnupg/pubring.kbx /tmp/.gnupg/trustdb.gpg && \
         mv node-${NODEJS_VERSION}-linux-s390x ${NODEJS_HOME} && \
-        echo "NODEJS VERSION FROM OUR ATTEMPT AT 10.23.0:" && nodejs -v && \
+        #echo "NODEJS VERSION FROM OUR ATTEMPT AT 10.23.0:" && nodejs -v && \
         #
         apt-get install -y npm && \
         npm install yarn -g && \
