@@ -23,12 +23,13 @@ RUN apt-get update && \
         #curl -sL https://deb.nodesource.com/setup_10.x | bash - && \
         #bash nodesource_setup.sh && \
         #apt-get install -y nodejs && \
-        curl -fsSLO --compressed "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION.tar.xz" \
-        && curl -fsSLO --compressed "https://nodejs.org/dist/v$NODE_VERSION/SHASUMS256.txt.asc" \
-        && gpg --batch --decrypt --output SHASUMS256.txt SHASUMS256.txt.asc \
-        && grep " node-v$NODE_VERSION.tar.xz\$" SHASUMS256.txt | sha256sum -c - \
-        && tar -xf "node-v$NODE_VERSION.tar.xz" \
-        && cd "node-v$NODE_VERSION" \
+        curl -fsSLO --compressed "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION.tar.xz" && \
+        echo "DEBUG CURL" && \
+        curl -fsSLO --compressed "https://nodejs.org/dist/v$NODE_VERSION/SHASUMS256.txt.asc" && \
+        gpg --batch --decrypt --output SHASUMS256.txt SHASUMS256.txt.asc && \
+        grep " node-v$NODE_VERSION.tar.xz\$" SHASUMS256.txt | sha256sum -c - && \
+        tar -xf "node-v$NODE_VERSION.tar.xz" && \
+        cd "node-v$NODE_VERSION" && \
         echo "NODEJS VERSION FROM OUR ATTEMPT AT 10.23.0:" && nodejs -v && \
         #
         apt-get install -y npm && \
