@@ -19,6 +19,7 @@ RUN apt-get update && \
         apt-get install -y curl && \
         apt-get install -y wget && \
         apt-get install -y gpg && \
+        apt-get install xz-utils && \
         #
         #curl -sL https://deb.nodesource.com/setup_10.x -o nodesource_setup.sh && \
         #curl -sL https://deb.nodesource.com/setup_10.x | bash - && \
