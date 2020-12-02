@@ -14,6 +14,10 @@ ENV HOME=/tmp \
     SRC_PATH=/usr/src
 
 RUN apt-get update && \
+    export DEBIAN_FRONTEND=noninteractive \
+    && export DEBCONF_NONINTERACTIVE_SEEN=true \
+    && echo 'tzdata tzdata/Areas select Etc' | debconf-set-selections \
+    && echo 'tzdata tzdata/Zones/Etc select UTC' | debconf-set-selections && \
         apt-get remove -y cmdtest && \
         #apt-get install -y nodejs && \
         apt-get install -y curl && \
