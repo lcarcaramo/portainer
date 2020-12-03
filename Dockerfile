@@ -54,6 +54,7 @@ RUN apt-get update && \
         npm install yarn@1.22.5 -g && \
         #apt-get install -y yarn && \
         #apt-get install -y golang-stable && \
+        npm install gifsicle && \
         #
         echo "DEBUG A" && pwd && ls && \
         mkdir temp                                                      && \
