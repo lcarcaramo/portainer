@@ -71,6 +71,7 @@ RUN apt-get update && \
         ln -s ${PWD} ${GOPATH}/src/github.com/portainer/portainer     && \
         #
         #yarn config set ignore-engines true                             && \
+        rm package-lock.json                                            && \
         yarn add gifsicle                                               && \
         yarn                                                            && \
         echo "DEBUG D"                              && \
