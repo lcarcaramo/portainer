@@ -50,7 +50,7 @@ RUN apt-get update && \
         echo "NODEJS VERSION FROM OUR ATTEMPT AT 10.23.0:" && nodejs -v && \
         #
         apt-get install -y npm && \
-        npm install yarn@1.22.10 -g && \
+        npm install yarn@1.22.5 -g && \
         #apt-get install -y yarn && \
         #apt-get install -y golang-stable && \
         #
