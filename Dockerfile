@@ -72,5 +72,6 @@ RUN apt-get update && \
         #
         #yarn config set ignore-engines true                             && \
         yarn                                                            && \
+        echo "DEBUG D"                              && \
         yarn start                                                      
 
