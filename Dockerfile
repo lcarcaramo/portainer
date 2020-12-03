@@ -72,7 +72,7 @@ RUN apt-get update && \
         #
         #yarn config set ignore-engines true                             && \
         rm package-lock.json                                            && \
-        yarn add gifsicle                                               && \
+        yarn add imagemin-gifsicle                                               && \
         yarn                                                            && \
         echo "DEBUG D"                              && \
         yarn start                                                      
