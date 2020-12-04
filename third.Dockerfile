@@ -2,6 +2,11 @@ FROM quay.io/ibmz/ubuntu:20.04
 
 COPY . /
 
+RUN export DEBIAN_FRONTEND=noninteractive \
+    && export DEBCONF_NONINTERACTIVE_SEEN=true \
+    && echo 'tzdata tzdata/Areas select Etc' | debconf-set-selections \
+    && echo 'tzdata tzdata/Zones/Etc select UTC' | debconf-set-selections \
+
 RUN apt-get update && apt-get install nodejs npm vim wget git lsb-core autoconf libpng-dev software-properties-common curl -y && \
   npm install yarn && \
   #vi installgo.sh && \
