@@ -9,7 +9,8 @@ RUN apt-get update && apt-get install nodejs npm vim wget git lsb-core autoconf 
     && echo 'tzdata tzdata/Zones/Etc select UTC' | debconf-set-selections
 
 RUN apt-get update && apt-get install nodejs npm vim wget git lsb-core autoconf libpng-dev software-properties-common curl -y && \
-  npm install mime && \
+  npm install mime-types && \
+  echo "DEBUG A" && \
   npm install yarn && \
   #vi installgo.sh && \
   chmod a+x installgo.sh && \
