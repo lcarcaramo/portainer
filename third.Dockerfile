@@ -6,9 +6,8 @@ RUN apt-get update && \
     export DEBIAN_FRONTEND=noninteractive \
     && export DEBCONF_NONINTERACTIVE_SEEN=true \
     && echo 'tzdata tzdata/Areas select Etc' | debconf-set-selections \
-    && echo 'tzdata tzdata/Zones/Etc select UTC' | debconf-set-selections
-
-RUN apt-get update && apt-get install nodejs npm vim wget git lsb-core autoconf libpng-dev software-properties-common curl -y && \
+    && echo 'tzdata tzdata/Zones/Etc select UTC' | debconf-set-selections && \
+  apt-get update && apt-get install nodejs dialog npm vim wget git lsb-core autoconf libpng-dev software-properties-common curl -y && \
   echo "DEBUG A" && \
   npm install mime-types && \
   echo "DEBUG B" && \
