@@ -23,5 +23,5 @@ RUN apt-get update && \
   ln -s ${PWD}/portainer ${GOPATH}/src/github.com/portainer && \
   cd portainer/ && \
   ln -s /usr/local/go//bin/go /usr/bin/go && \
-  /node_modules/yarn/bin/yarn && \
-  /node_modules/yarn/bin/yarn start 
+  /node_modules/yarn/bin/yarn
+#  /node_modules/yarn/bin/yarn start 
